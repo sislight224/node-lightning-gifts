@@ -1,0 +1,35 @@
+{
+    "name": "node-lightning-gifts",
+    "version": "0.5.1",
+    "description": "Express server for Lightning Gifts functions",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "nodemon -r dotenv/config src/index.js",
+        "start": "node src/index.js",
+        "migrate:prod": "export GOOGLE_APPLICATION_CREDENTIALS=\"/Users/ross/Downloads/devScrap/lightning-in-a-box-76d012f538ff.json\" fireway migrate --projectId=lightning-in-a-box",
+        "migrate:dev": "export GOOGLE_APPLICATION_CREDENTIALS=\"/Users/ross/Downloads/devScrap/lightning-gifts-develop-b816b68b86fe.json\" fireway migrate --projectId=lightning-gifts-develop"
+    },
+    "dependencies": {
+        "@google-cloud/firestore": "~2.2.9",
+        "@sentry/node": "~5.5.0",
+        "axios": "~0.19.2",
+        "bech32": "~1.1.3",
+        "cors": "2.8.5",
+        "crypto-random-string": "3.0.1",
+        "dotenv": "~8.0.0",
+        "express": "~4.17.1",
+        "express-rate-limit": "~5.0.0",
+        "firebase-admin": "~8.2.0",
+        "lodash": "~4.17.15",
+        "mixpanel": "^0.10.3",
+        "nodemon": "~1.18.11",
+        "sha.js": "^2.4.11"
+    },
+    "engines": {
+        "node": "10.x"
+    },
+    "keywords": [],
+    "prettier": {
+        "requirePragma": true
+    }
+}
